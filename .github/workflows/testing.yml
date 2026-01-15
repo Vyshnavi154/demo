@@ -3,6 +3,9 @@ name: Demo
 on:
  workflow_dispatch: 
 
+env:
+     net_worth: 1000000000000000
+
 jobs:
  job1:
    runs-on: ubuntu-latest
