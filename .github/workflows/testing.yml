@@ -7,7 +7,7 @@ jobs:
  job1:
    runs-on: ubuntu-latest
    env:
-     net_worth: 1000000
+     net_worth: 1000000000000000
    steps:
       - name: print variable
         env:
@@ -16,6 +16,12 @@ jobs:
          echo "${{ vars.NAME }}"  >> $GITHUB_STEP_SUMMARY
          echo "${{ secrets.PHNO }}"  >> $GITHUB_STEP_SUMMARY
          echo "$net_worth" >> $GITHUB_STEP_SUMMARY
+ job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display
+        run: echo ""${{ vars.NAME }}" net worth is $net_worth"  >> $GITHUB_STEP_SUMMARY
+   
          
              
      
