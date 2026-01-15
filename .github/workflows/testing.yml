@@ -9,8 +9,8 @@ jobs:
    steps:
       - name: print variable
         run: |
-         echo ${{ vars.CUSTOMER }}
-         echo ${{ secrets.CUSTOMER_PHNO }}
+         echo "${{ vars.CUSTOMER }}"
+         echo "${{ secrets.CUSTOMER_PHNO }}"
              
      
    
