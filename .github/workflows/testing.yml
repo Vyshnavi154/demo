@@ -9,8 +9,8 @@ jobs:
    steps:
       - name: print variable
         run: |
-         echo "${{ vars.CUSTOMER }}"  >> $GITHUB_STEP_SUMMARY
-         echo "${{ secrets.CUSTOMER_PHNO }}"  >> $GITHUB_STEP_SUMMARY
+         echo "${{ vars.NAME }}"  >> $GITHUB_STEP_SUMMARY
+         echo "${{ secrets.PHNO }}"  >> $GITHUB_STEP_SUMMARY
              
      
    
