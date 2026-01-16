@@ -29,7 +29,8 @@ jobs:
       - name: display
         run: |
          echo "${{ vars.NAME }}" net worth is $net_worth  >> $GITHUB_STEP_SUMMARY
-         echo "${{ github.event.inputs.Env }}" net worth is $net_worth  >> $GITHUB_STEP_SUMMARY
+    
+         
          echo "${{ github.event_name }}"  >> $GITHUB_STEP_SUMMARY
          echo "${{ github.workflow }}"  >> $GITHUB_STEP_SUMMARY   
          echo "${{ github.triggering_actor }}"  >> $GITHUB_STEP_SUMMARY
