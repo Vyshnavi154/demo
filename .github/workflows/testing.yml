@@ -49,13 +49,13 @@ jobs:
   
           ref: main
           
-          path: projects
+          path: project/
           
 
       - name: show
         run: |
          
-         ls -R projects >> $GITHUB_STEP_SUMMARY
+         ls -R project/ >> $GITHUB_STEP_SUMMARY
          
          
 
