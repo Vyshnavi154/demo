@@ -45,6 +45,21 @@ jobs:
          echo "${{ github.repository }}"  >> $GITHUB_STEP_SUMMARY
          echo "${{ github.ref }}"  >> $GITHUB_STEP_SUMMARY
          
+      - name: Checkout
+        uses: github-actions/checkout@v4
+        with:
+          ref: main
+          working_directory: projects
+          depth: 0
+         run: |
+          cd projects
+          pwd
+          ls -l
+       
+       
+         
+         
+         
              
      
    
