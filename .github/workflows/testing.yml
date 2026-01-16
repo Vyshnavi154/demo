@@ -57,7 +57,7 @@ jobs:
          cd projects
          pwd >> $GITHUB_STEP_SUMMARY
          
-         ls -l >> $GITHUB_STEP_SUMMARY
+         ls -l projects >> $GITHUB_STEP_SUMMARY
 
     
        
