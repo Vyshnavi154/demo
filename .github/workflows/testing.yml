@@ -1,16 +1,8 @@
 name: Demo
 
 on:
- workflow_dispatch: 
-  inputs:
-   Env:
-    type: choice
-    default: Prod
-    options:
-       - Prod
-       - QA
-       - DEPLOY
-  
+ push:
+   branches: ['main']
       
  
  
