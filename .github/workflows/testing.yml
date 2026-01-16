@@ -2,6 +2,18 @@ name: Demo
 
 on:
  workflow_dispatch: 
+  inputs:
+   Env:
+    type: choice
+    default: Prod
+    options:
+    
+       - QA
+       - DEPLOY
+  
+      
+ 
+ 
 
 env:
      net_worth: 1000000000000000
@@ -23,7 +35,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: display
-        run: echo ""${{ vars.NAME }}" net worth is $net_worth"  >> $GITHUB_STEP_SUMMARY
+        run: |
+         echo ""${{ vars.NAME }}" net worth is $net_worth"  >> $GITHUB_STEP_SUMMARY
+         echo ""${{ github.event.inputs.Env }}" net worth is $net_worth"  >> $GITHUB_STEP_SUMMARY
    
          
              
