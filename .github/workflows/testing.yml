@@ -47,7 +47,7 @@ jobs:
       - name: Run Build Script
         working-directory: project
         run: |
-         ls -la 
+         ls -la  >> $GITHUB_STEP_SUMMARY
          
 
     
