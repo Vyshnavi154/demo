@@ -7,7 +7,7 @@ on:
     type: choice
     default: Prod
     options:
-    
+       - Prod
        - QA
        - DEPLOY
   
