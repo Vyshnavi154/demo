@@ -83,7 +83,7 @@ jobs:
 
         
       - name: confirm install java
-        run: echo java -version >> $GITHUB_STEP_SUMMARY
+        run: java -version >> $GITHUB_STEP_SUMMARY
 
     
        
