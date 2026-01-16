@@ -76,7 +76,7 @@ jobs:
       - name: install java
         uses: actions/setup-java@v4
         with:
-          java-version: ${{ github.inputs.version }}
+          java-version: ${{ inputs.version }}
           distribution: ${{ env.dis }}
           cache: maven
           cache-dependency-path: '**/pom.xml'
