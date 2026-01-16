@@ -52,7 +52,7 @@ jobs:
 
      
       - name: Run Build Script
-        working-directory: ./my-project
+        working-directory: my-project
         run: |
          ls -la 
          
