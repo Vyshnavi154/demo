@@ -24,7 +24,7 @@ jobs:
          echo "${{ secrets.PHNO }}"  >> $GITHUB_STEP_SUMMARY
          echo "$net_worth" >> $GITHUB_STEP_SUMMARY
  job2:
-    if: success()
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       - name: display
