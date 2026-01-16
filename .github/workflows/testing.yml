@@ -51,13 +51,7 @@ jobs:
           path: projects
           fetch-depth: 0
 
-      - name: display
-        working-directory: projects
-        run: |
-          cd projects >> $GITHUB_STEP_SUMMARY
-          pwd >> $GITHUB_STEP_SUMMARY
-          ls -l projects >> $GITHUB_STEP_SUMMARY
-       
+    
        
          
          
