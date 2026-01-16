@@ -48,12 +48,14 @@ jobs:
         with:
   
           ref: main
-          path: projects\
+          path: projects
           fetch-depth: 0
-         run: |
-          cd projects
-          pwd
-          ls -l
+
+      - name: display
+        run: |
+          cd projects >> $GITHUB_STEP_SUMMARY
+          pwd  >> $GITHUB_STEP_SUMMARY
+          ls -l >> $GITHUB_STEP_SUMMARY
        
        
          
