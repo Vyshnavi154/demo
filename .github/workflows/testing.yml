@@ -48,9 +48,9 @@ jobs:
         with:
   
           ref: main
-          path: projects/
-         
           fetch-depth: 0
+          path: projects/
+          
 
       - name: show
         run: |
