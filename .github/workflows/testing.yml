@@ -15,8 +15,7 @@ on:
    
 
  
- push:
-   branches: ['main']
+
  
    
    
