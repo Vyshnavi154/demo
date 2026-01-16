@@ -48,17 +48,14 @@ jobs:
         with:
   
           ref: main
-          fetch-depth: 0
-          path: projects/
+          
+          path: projects
           
 
       - name: show
         run: |
-         pwd >> $GITHUB_STEP_SUMMARY
-         cd projects
-         pwd >> $GITHUB_STEP_SUMMARY
-         touch file1
-         ls -lR $(pwd) >> $GITHUB_STEP_SUMMARY
+         
+         ls -R projects >> $GITHUB_STEP_SUMMARY
          
          
 
