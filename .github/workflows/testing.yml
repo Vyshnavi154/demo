@@ -54,8 +54,8 @@ jobs:
       - name: display
         run: |
           cd projects >> $GITHUB_STEP_SUMMARY
-         
-          ls -l $pwd >> $GITHUB_STEP_SUMMARY
+          pwd >> $GITHUB_STEP_SUMMARY
+          ls -l projects >> $GITHUB_STEP_SUMMARY
        
        
          
