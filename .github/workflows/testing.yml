@@ -42,11 +42,11 @@ jobs:
          echo "${{ github.workflow }}"  >> $GITHUB_STEP_SUMMARY   
          echo "${{ github.triggering_actor }}"  >> $GITHUB_STEP_SUMMARY
          echo "${{ github.repository }}"  >> $GITHUB_STEP_SUMMARY
-  
-         
-      - name: Checkout
-        uses: github-actions/checkout@v4
+
+      - name: checkout
+        uses: actions/checkout@v4
         with:
+  
           ref: main
           path: projects\
           fetch-depth: 0
