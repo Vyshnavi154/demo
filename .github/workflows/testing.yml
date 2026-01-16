@@ -1,14 +1,36 @@
 name: Demo
 
+
+
 on:
+ workflow_dispatch: 
+
+  inputs:
+    version:
+     type: number
+     default: 17
+     required: true
+
+   
+   
+
+ 
  push:
    branches: ['main']
+ 
+   
+   
+     
+ 
       
  
  
 
 env:
      net_worth: 1000000000000000
+     dis: 'temurin'
+
+
 
 jobs:
  job1:
@@ -52,6 +74,17 @@ jobs:
          pwd $GITHUB_STEP_SUMMARY
          ls -la  >> $GITHUB_STEP_SUMMARY
          
+      - name: install java
+        uses: actions/setup-java@v4
+        with:
+          java-version: $ {{ github.inputs.version }}
+          distribution: $dis
+          cache: maven
+          cache-dependency-path: '**/pom.xml'
+
+        
+      - name: confirm install java
+        run: java --version >> $GITHUB_STEP_SUMMARY
 
     
        
