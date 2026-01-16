@@ -46,17 +46,15 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-  
           ref: main
-          
-          path: project/
+          path: project
           
 
-      - name: show
+     
+      - name: Run Build Script
+        working-directory: ./my-project
         run: |
-         
-         ls -R project/ >> $GITHUB_STEP_SUMMARY
-         
+         ls -la 
          
 
     
