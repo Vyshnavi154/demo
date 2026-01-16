@@ -52,7 +52,7 @@ jobs:
           fetch-depth: 0
 
       - name: show
-        run: pwd >> $GITHUB_STEP_SUMMARY
+        run: cd projects
 
     
        
