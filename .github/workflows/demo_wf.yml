@@ -1,0 +1,19 @@
+name: demo_wf
+
+on:
+  workflow_call:
+    inputs:
+      version:
+       type: number
+       required: true
+
+      distribution:
+       type: string
+       required: true
+
+jobs:
+  job1:
+   runs-on: ubuntu-latest
+   steps:
+     - name: show
+       run: echo "${{ github.event.inputs.version }}" "${{ github.event.inputs.distribution }}"
