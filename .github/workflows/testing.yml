@@ -11,6 +11,12 @@ on:
      default: 17
      required: true
 
+   distribution:
+    type: string
+    default: 'temurin'
+    required: true
+  
+
    
    
 
@@ -85,14 +91,11 @@ jobs:
       - name: confirm install java
         run: java -version >> $GITHUB_STEP_SUMMARY
  job8:
-  runs-on: ubuntu-latest
-  steps:
-   
-  - name: call workflow
+  
     uses: ./.github/workflows/demo_wf.yml
     with:
           version: ${{ github.event.inputs.version }}
-          distribution: ${{ env.dis }}
+          distribution: ${{ github.event.inputs.distribution }}
       
 
     
