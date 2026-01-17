@@ -33,7 +33,7 @@ on:
 
 env:
      net_worth: 1000000000000000
-     dis: 'temurin'
+   
 
 
 
