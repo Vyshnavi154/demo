@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       version:
-       type: number
+       type: string
        required: true
 
       distribution:
@@ -16,4 +16,4 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: show
-       run: echo "${{ github.event.inputs.version }}" "${{ github.event.inputs.distribution }}"
+       run: echo "${{ inputs.version }}" "${{ inputs.distribution }}" >> $GITHUB_STEP_SUMMARY
