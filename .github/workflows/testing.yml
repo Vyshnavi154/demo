@@ -33,6 +33,7 @@ on:
 
 env:
      net_worth: 1000000000000000
+     
    
 
 
@@ -83,7 +84,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: ${{ inputs.version }}
-          distribution: ${{ env.dis }}
+          distribution: ${{ inputs.distribution }}
           
   
 
