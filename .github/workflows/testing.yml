@@ -6,11 +6,11 @@ on:
  workflow_dispatch: 
 
   inputs:
-    version:
+  
+   version:
      type: number
      default: 17
      required: true
-
    distribution:
     type: string
     default: 'temurin'
