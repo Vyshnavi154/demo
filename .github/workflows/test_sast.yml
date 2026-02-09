@@ -1,0 +1,30 @@
+name: test
+
+on:
+  workflow_dispatch:
+   
+  
+  pull_request:
+    branches: [ 'demob' ]
+    
+jobs:
+  CI-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout SRC
+        uses: actions/checkout@v4
+        
+      
+      - name: RUN SAST
+        uses: SonarSource/sonarcloud-github-action@v2
+        env:
+          SONAR_TOKEN: ${{ secrets.NEW_TOKEN }}
+       
+        with:
+            args: >
+              -Dsonar.projectKey=Vyshnavi154_DevOps_test1
+              -Dsonar.organization=vyshnavi154
+              -Dsonar.host.url=https://sonarcloud.io
+              -Dsonar.branch.name=${{ github.ref_name }}
+              -Dsonar.qualitygate.wait=true
+              
