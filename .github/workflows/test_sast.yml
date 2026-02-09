@@ -5,7 +5,7 @@ on:
    
   
   pull_request:
-    branches: [ 'demob' ]
+    branches: [ 'master','demob' ]
     
 jobs:
   CI-job:
